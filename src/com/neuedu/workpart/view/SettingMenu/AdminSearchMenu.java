@@ -1,4 +1,4 @@
-package com.neuedu.workpart.view;
+package com.neuedu.workpart.view.SettingMenu;
 
 import com.neuedu.workpart.view.IMenu;
 import com.neuedu.workpart.pojo.TUser;

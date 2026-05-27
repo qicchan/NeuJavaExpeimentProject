@@ -1,6 +1,7 @@
-package com.neuedu.workpart.view;
+package com.neuedu.workpart.view.SettingMenu;
 
 import com.neuedu.workpart.service.TUserService;
+import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class AdminLoginMenu implements IMenu {
             TUserService userService=new TUserService();
 
         if(userService.findUserByAll(1,userName,password)){
-            AdminMainMenu amm=new AdminMainMenu();
+            AdminSettingMenu amm=new AdminSettingMenu();
             amm.execute();
             return;
         }else{

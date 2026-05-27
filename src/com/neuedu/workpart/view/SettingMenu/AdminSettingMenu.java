@@ -1,22 +1,13 @@
-package com.neuedu.workpart.view;
+package com.neuedu.workpart.view.SettingMenu;
+
+import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;
 
-public class AdminMainMenu implements IMenu {
+public class AdminSettingMenu implements IMenu {
     public void execute() {
         Scanner sc=new Scanner(System.in);
         while(true) {
-            //@TODO  菜单需要完善
-            /*
-             用户管理
-                 1--添加用户
-                 2-- 查询所有
-                 3-根据条件查询
-             护理管理
-                 4--护理级别
-                 5-护理项目
-                 。。。。。。。
-             */
             System.out.println("1.添加管理员 2.查询所有管理员信息  3.根据条件查询管理员信息 4.修改管理员信息 5.删除管理员信息");
             System.out.println("6.添加健康管家 7.查询所有健康管家信息  8.根据条件查询健康管家信息 9.修改健康管家信息 10.删除健康管家信息");
             System.out.println("11.退出系统");

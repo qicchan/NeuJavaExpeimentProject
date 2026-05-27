@@ -1,7 +1,8 @@
-package com.neuedu.workpart.view;
+package com.neuedu.workpart.view.SettingMenu;
 
 import com.neuedu.workpart.pojo.TUser;
 import com.neuedu.workpart.service.TUserService;
+import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;
 

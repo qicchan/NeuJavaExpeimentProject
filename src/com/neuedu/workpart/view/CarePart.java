@@ -1,6 +1,6 @@
 package com.neuedu.workpart.view;
 
-public class HealthManagerMainMenu {
+public class CarePart implements IMenu{
     public void execute() {
     }
 }

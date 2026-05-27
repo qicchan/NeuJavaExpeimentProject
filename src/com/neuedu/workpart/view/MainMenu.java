@@ -11,7 +11,7 @@ public class MainMenu {
             System.out.println("=========东软颐养中心管理系统=========");
             System.out.println("1------------管理员登录-------------");
             System.out.println("2------------ 护工登录--------------");
-            System.out.println("3--------------退出---------------");
+            System.out.println("3---------------退出----------------");
             //获取用户输入
             int result = sc.nextInt();
             //根据用户的输入跳转到不同的页面
@@ -19,13 +19,13 @@ public class MainMenu {
                 case 1:
                     //管理员登录
                     System.out.println("即将进入管理员登录...");
-                    AdminLoginMenu alm=new AdminLoginMenu();
+                    com.neuedu.workpart.view.SettingMenu.AdminLoginMenu alm=new com.neuedu.workpart.view.SettingMenu.AdminLoginMenu();
                     alm.execute();
                     break;
                 case 2:
                     //护工登录
                     System.out.println("即将进入护工登录...");
-                    HealthManagerLoginMenu hmlm = new HealthManagerLoginMenu();
+                    com.neuedu.workpart.view.SettingMenu.HealthManagerLoginMenu hmlm = new com.neuedu.workpart.view.SettingMenu.HealthManagerLoginMenu();
                     hmlm.execute();
                     break;
                 case 3:
