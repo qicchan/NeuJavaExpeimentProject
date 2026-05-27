@@ -1,6 +1,6 @@
-package com.neuedu.workpart.view.AdministratorMenu;
+package com.neuedu.workpart.view;
 
-import com.neuedu.workpart.dao.TUserDao;
+import com.neuedu.workpart.service.TUserService;
 import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;
@@ -13,7 +13,8 @@ public class AdminDelMenu implements IMenu {
         if (decide == 1) {
             System.out.println("请输入要删除的用户id");
             Integer id = sc.nextInt();
-            boolean result= new TUserDao().deleteById(id);
+            TUserService userService = new TUserService();
+            boolean result= userService.deleteUser(id);
             if (result) {
                 System.out.println("删除成功");
             }else{

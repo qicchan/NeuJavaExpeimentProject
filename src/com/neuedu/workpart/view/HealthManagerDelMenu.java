@@ -1,6 +1,6 @@
-package com.neuedu.workpart.view.HealthManagerMenu;
+package com.neuedu.workpart.view;
 
-import com.neuedu.workpart.dao.MUserDao;
+import com.neuedu.workpart.service.MUserService;
 import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;
@@ -13,7 +13,8 @@ public class HealthManagerDelMenu implements IMenu {
         if (decide == 1) {
             System.out.println("请输入要删除的用户id");
             Integer id = sc.nextInt();
-            boolean result= new MUserDao().deleteById(id);
+            MUserService userService = new MUserService();
+            boolean result= userService.deleteUser(id);
             if (result) {
                 System.out.println("删除成功");
             }else{

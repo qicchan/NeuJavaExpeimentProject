@@ -1,4 +1,4 @@
-package com.neuedu.workpart.view.AdministratorMenu;
+package com.neuedu.workpart.view;
 
 import com.neuedu.workpart.pojo.TUser;
 import com.neuedu.workpart.service.TUserService;

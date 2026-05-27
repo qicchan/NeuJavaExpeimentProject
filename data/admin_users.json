@@ -1,1 +1,1 @@
-[{"id":2,"userName":"admin02","password":"123456","userType":1},{"id":3,"userName":"admin03","password":"654321","userType":1},{"id":4,"userName":"user04","password":"123456","userType":2},{"id":4,"userName":"admin01","password":"123456","userType":1}]
+[{"id":2,"userName":"admin02","userType":1,"passWord":"123456"},{"id":3,"userName":"admin03","userType":1,"passWord":"654321"},{"id":4,"userName":"user04","userType":2,"passWord":"123456"},{"id":4,"userName":"admin01","userType":1,"passWord":"123456"},{"id":9,"userName":"healthmanager01","userType":2,"passWord":"123456"}]

@@ -1,4 +1,4 @@
-package com.neuedu.workpart.view.HealthManagerMenu;
+package com.neuedu.workpart.view;
 
 import com.neuedu.workpart.pojo.TUser;
 import com.neuedu.workpart.service.MUserService;
@@ -21,6 +21,7 @@ public class HealthManagerAddMenu implements IMenu {
         user.setUserType(userType);
         user.setUserName(userName);
         user.setPassword(password);
+        //设置账号密码
         MUserService us=new MUserService();
         String result=us.addUser(user);
         System.out.println(result);

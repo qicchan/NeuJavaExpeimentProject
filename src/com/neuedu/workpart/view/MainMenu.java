@@ -1,29 +1,25 @@
 package com.neuedu.workpart.view;
 
 
-import com.neuedu.workpart.view.HealthManagerMenu.HealthManagerLoginMenu;
-
 import java.util.Scanner;
 
 public class MainMenu {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         while(true) {
             System.out.println("=========东软颐养中心管理系统=========");
             System.out.println("1------------管理员登录-------------");
             System.out.println("2------------ 护工登录--------------");
             System.out.println("3--------------退出---------------");
-            //实例化Scanner
-            Scanner sc = new Scanner(System.in);
             //获取用户输入
             int result = sc.nextInt();
-            //用result变量接收用户输入
             //根据用户的输入跳转到不同的页面
             switch (result) {
                 case 1:
                     //管理员登录
                     System.out.println("即将进入管理员登录...");
-                    com.neuedu.workpart.view.AdministratorMenu.AdminLoginMenu alm=new com.neuedu.workpart.view.AdministratorMenu.AdminLoginMenu();
+                    AdminLoginMenu alm=new AdminLoginMenu();
                     alm.execute();
                     break;
                 case 2:
@@ -33,9 +29,9 @@ public class MainMenu {
                     hmlm.execute();
                     break;
                 case 3:
-//                /退出
-                    System.exit(1);
-                    break;
+                    //退出
+                    System.out.println("已退出系统");
+                    return;
                 default:
                     System.out.println("输入有误，请重新输入");
                     break;

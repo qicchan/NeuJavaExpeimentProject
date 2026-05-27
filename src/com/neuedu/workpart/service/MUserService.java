@@ -55,8 +55,9 @@ public class MUserService {
         return userDao.deleteById(id);
     }
     public boolean findUserByAll(int inputUserType, String inputUserName, String inputPassword) {
-        return ((this.userDao.findByUserPassWord(userDao.findByUserName(inputUserName),inputPassword))) &&
-                (userDao.findByUserType(userDao.findByUserName(inputUserName),inputUserType));
+        TUser user = userDao.findByUserName(inputUserName);
+        return userDao.findByUserPassWord(user, inputPassword)
+                && userDao.findByUserType(user, inputUserType);
     }
 
 }

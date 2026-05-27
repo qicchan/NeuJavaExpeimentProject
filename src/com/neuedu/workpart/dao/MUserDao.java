@@ -66,19 +66,12 @@ public class MUserDao {
         // 没找到返回 null
         return null;
     }
-    public boolean findByUserPassWord(TUser tUser,String passWord) {
-        if (tUser.getPassWord().equals(passWord)) {
-            return tUser.getPassWord().equals(passWord);
-        }
-        // 没找到返回 null
-        return false;
+    public boolean findByUserPassWord(TUser tUser, String passWord) {
+        return tUser != null && tUser.getPassWord().equals(passWord);
     }
-    public boolean findByUserType(TUser tUser,int Type) {
-        if (tUser.getUserType() == Type) {
-            return tUser.getUserType() == Type;
-        }
-        // 没找到返回错误
-        return false;
+
+    public boolean findByUserType(TUser tUser, int type) {
+        return tUser != null && tUser.getUserType() == type;
     }
 
     /**
@@ -124,7 +117,7 @@ public class MUserDao {
             // 普通for循环查找并删除
             for (int i = 0; i < userList.size(); i++) {
                 TUser user = userList.get(i);
-                if (user.getId() == id) {
+                if (user.getId() != null && user.getId() == id) {
                     userList.remove(i);
                     isDelete = true;
                     break;
