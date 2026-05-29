@@ -1,7 +1,7 @@
 package com.neuedu.workpart.view;
 
-import java.awt.*;
-import java.beans.BeanDescriptor;
+import com.neuedu.workpart.view.CustomerMenu.Customer_admin_Menu;
+
 import java.util.Scanner;
 
 public class AdminChosingMenu implements IMenu {
@@ -12,7 +12,7 @@ public class AdminChosingMenu implements IMenu {
         int choice = sc.nextInt();
         switch (choice) {
             case 1:
-                CustomerMenu customerMenu = new CustomerMenu();
+                Customer_admin_Menu customerMenu = new Customer_admin_Menu();
                 customerMenu.execute();
                 break;
             case 2:
