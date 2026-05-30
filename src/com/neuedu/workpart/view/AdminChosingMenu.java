@@ -22,9 +22,14 @@ public class AdminChosingMenu implements IMenu {
             case 3:
                  CarePart carePart = new CarePart();
                  carePart.execute();
+                 break;
             case 4:
                 com.neuedu.workpart.view.SettingMenu.AdminSettingMenu asm=new com.neuedu.workpart.view.SettingMenu.AdminSettingMenu();
                 asm.execute();
+                break;
+            default:
+                System.out.println("输入错误请检查选项");
+                break;
         }
 
     }
