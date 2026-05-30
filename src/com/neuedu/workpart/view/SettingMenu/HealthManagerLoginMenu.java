@@ -1,7 +1,7 @@
 package com.neuedu.workpart.view.SettingMenu;
 
 import com.neuedu.workpart.service.MUserService;
-import com.neuedu.workpart.view.HealthManagerMainMenu;
+import com.neuedu.workpart.view.HealthManagerMenu.HealthManagerMainMenu;
 import com.neuedu.workpart.view.IMenu;
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.neuedu.tms.utils;
+package com.neuedu.workpart.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -1,7 +1,7 @@
 package com.neuedu.workpart.view;
 
-import java.awt.*;
-import java.beans.BeanDescriptor;
+import com.neuedu.workpart.view.HealthManagerMenu.CustomerMenu;
+
 import java.util.Scanner;
 
 public class AdminChosingMenu implements IMenu {

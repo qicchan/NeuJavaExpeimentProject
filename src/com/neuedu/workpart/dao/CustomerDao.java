@@ -14,14 +14,19 @@ import com.fasterxml.jackson.core.type.TypeReference;
  * 负责Customer对象的JSON文件持久化操作（增删改查）
  * 数据存储于 data/customer_users.json
  */
-public class CustomerDao{
-    /** JSON数据文件路径 */
+public class CustomerDao {
+    /**
+     * JSON数据文件路径
+     */
     public static final File FILE_NAME = new File("data\\customer_users.json");
-    /** Jackson序列化/反序列化工具 */
+    /**
+     * Jackson序列化/反序列化工具
+     */
     private final ObjectMapper om = new ObjectMapper();
 
     /**
      * 新增客户
+     *
      * @param customer 客户对象（id由系统自动生成）
      * @return 操作结果提示
      */
@@ -39,6 +44,7 @@ public class CustomerDao{
 
     /**
      * 查询全部客户
+     *
      * @return 客户列表，文件不存在或读取异常时返回空列表
      */
     public List<Customer> findAll() {
@@ -46,13 +52,16 @@ public class CustomerDao{
             return new ArrayList<>();
         }
         try {
-            return om.readValue(FILE_NAME, new TypeReference<List<Customer>>() {});
+            return om.readValue(FILE_NAME, new TypeReference<List<Customer>>() {
+            });
         } catch (IOException e) {
             return new ArrayList<>();
         }
     }
+
     /**
      * 按客户姓名查询
+     *
      * @param userName 客户姓名
      * @return 匹配的Customer对象，未找到返回null
      */
@@ -65,8 +74,10 @@ public class CustomerDao{
         }
         return null;
     }
+
     /**
      * 按ID查询客户
+     *
      * @param id 客户主键ID
      * @return 匹配的Customer对象，未找到返回null
      */
@@ -79,12 +90,14 @@ public class CustomerDao{
         }
         return null;
     }
+
     /**
      * 按身份证号查询客户（用于防重复登记）
+     *
      * @param idcard 身份证号
      * @return 匹配的Customer对象，未找到返回null
      */
-    public Customer findByIdcard(String idcard){
+    public Customer findByIdcard(String idcard) {
         List<Customer> customerList = findAll();
         for (Customer customer : customerList) {
             if (customer.getIdcard().equals(idcard)) {
@@ -93,12 +106,14 @@ public class CustomerDao{
         }
         return null;
     }
+
     /**
      * 按房间号查询客户
+     *
      * @param room_no 房间号
      * @return 匹配的Customer对象，未找到返回null
      */
-    public Customer findbyRoomNo(String room_no){
+    public Customer findbyRoomNo(String room_no) {
         List<Customer> customerList = findAll();
         for (Customer customer : customerList) {
             if (customer.getRoom_no().equals(room_no)) {
@@ -107,9 +122,11 @@ public class CustomerDao{
         }
         return null;
     }
+
     /**
      * 按ID更新客户全部信息
      * 遍历列表找到ID匹配的客户后，将传入对象的各字段值逐一套用
+     *
      * @param customer 包含更新后信息的客户对象
      */
     public void updateUser(Customer customer) {
@@ -140,8 +157,10 @@ public class CustomerDao{
             }
         }
     }
+
     /**
      * 按ID删除客户（物理删除，从列表中移除）
+     *
      * @param id 客户主键ID
      */
     public void deleteById(Integer id) {
@@ -153,6 +172,4 @@ public class CustomerDao{
             }
         }
     }
-
-
 }
