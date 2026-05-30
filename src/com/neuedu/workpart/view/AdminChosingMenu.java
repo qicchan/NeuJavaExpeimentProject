@@ -1,7 +1,5 @@
 package com.neuedu.workpart.view;
 
-import java.awt.*;
-import java.beans.BeanDescriptor;
 import java.util.Scanner;
 
 public class AdminChosingMenu implements IMenu {
@@ -20,7 +18,7 @@ public class AdminChosingMenu implements IMenu {
                 bedMenu.execute();
                 break;
             case 3:
-                 CarePart carePart = new CarePart();
+                 CarePartMenu carePart = new CarePartMenu();
                  carePart.execute();
                  break;
             case 4:
