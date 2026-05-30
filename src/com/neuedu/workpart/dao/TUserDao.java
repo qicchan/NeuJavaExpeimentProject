@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.core.type.TypeReference;
-
-
 public class TUserDao {
     // 数据文件路径，相对路径
     public static final File FILE_NAME = new File("data\\admin_users.json");
