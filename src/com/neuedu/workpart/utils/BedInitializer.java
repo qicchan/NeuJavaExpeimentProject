@@ -142,7 +142,30 @@ public class BedInitializer {
                 System.err.println("添加客户失败: " + c.getName());
             }
         }
-        System.out.println("客户数据初始化完成，共 " + names.size() + " 人。");
+        System.out.println("客户数据初始化完成（控制台+随机），共 " + names.size() + " 人。");
+    }
+
+    /**
+     * 读取客户模板文件，反序列化为 Customer 列表。
+     * @return 客户列表，文件不存在或读取失败时返回空列表
+     */
+    private static List<Customer> loadCustomerTemplate() {
+        if (!CUSTOMER_TEMPLATE.exists()) {
+            System.out.println("⚠ 客户模板文件不存在（" + CUSTOMER_TEMPLATE.getPath()
+                    + "），将回退到控制台输入。");
+            return new ArrayList<>();
+        }
+        try {
+            ObjectMapper om = new ObjectMapper();
+            List<Customer> customers = om.readValue(CUSTOMER_TEMPLATE,
+                    new TypeReference<List<Customer>>() {});
+            System.out.println("✓ 已加载客户模板，共 " + customers.size() + " 条记录。");
+            return customers;
+        } catch (IOException e) {
+            System.err.println("⚠ 读取客户模板失败: " + e.getMessage()
+                    + "，将回退到控制台输入。");
+            return new ArrayList<>();
+        }
     }
 
     private static void initUsageDetails(BedDao bedDao, CustomerDao customerDao, BedUsageDetailDao detailDao) {
