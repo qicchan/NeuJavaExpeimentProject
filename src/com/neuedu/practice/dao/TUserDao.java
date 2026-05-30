@@ -68,8 +68,8 @@ public class TUserDao {
         return null;
     }
     public boolean findByUserPassWord(TUser tUser,String passWord) {
-            if (tUser.getPassWord().equals(passWord)) {
-                return tUser.getPassWord().equals(passWord);
+            if (tUser.getPassword().equals(passWord)) {
+                return tUser.getPassword().equals(passWord);
             }
         // 没找到返回 null
         return false;
@@ -140,17 +140,5 @@ public class TUserDao {
         } catch (IOException e) {
             throw new RuntimeException("删除用户失败", e);
         }
-    }
-    /**
-     * 根据用户名查询用户（Stream 流式写法）
-     */
-    public TUser findByUserNameStream(String userName) {
-        return findAll().stream()
-                // 过滤：用户名相等
-                .filter(user -> user.getUserName().equals(userName))
-                // 取第一个
-                .findFirst()
-                // 没有找到返回 null
-                .orElse(null);
     }
 }

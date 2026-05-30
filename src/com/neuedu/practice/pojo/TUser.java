@@ -48,7 +48,7 @@ public class TUser implements Serializable {
         this.id = id;
     }
 
-    public String getPassWord() {
+    public String getPassword() {
         return password;
     }
 
@@ -74,7 +74,4 @@ public class TUser implements Serializable {
                 '}';
     }
 
-    public void setPassWord(String number) {
-        this.password = number;
-    }
 }

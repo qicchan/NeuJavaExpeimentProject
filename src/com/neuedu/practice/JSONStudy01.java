@@ -15,7 +15,7 @@ public class JSONStudy01 {
             //TUser是个类，admin 是TUser的实例对象
             TUser admin01 = new TUser();
             admin01.setUserName("admin01");
-            admin01.setPassWord("123456");
+            admin01.setPassword("123456");
             admin01.setId(1);
             //利用有参构造器创建对象
             TUser admin02 = new TUser(1, "admin02", "123456");
