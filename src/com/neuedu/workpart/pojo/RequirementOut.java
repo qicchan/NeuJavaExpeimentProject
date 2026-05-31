@@ -30,9 +30,6 @@ public class RequirementOut {
     /** 日期时间格式化器 */
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    public RequirementOut() {
-    }
-
     /**
      * 构造外出申请
      * @param reason 外出事由

@@ -3,12 +3,15 @@ package com.neuedu.workpart.pojo;
 
 import java.io.Serializable;
 
-/*
-实体类
-类名大驼峰，每个单词首字母都大写
-属性、方法都是小驼几，第一个单词全小写，第二个单词以后都首字母大写
-
+/**
+ 实体类
+ 类名大驼峰，每个单词首字母都大写
+ 属性、方法都是小驼几，第一个单词全小写，第二个单词以后都首字母大写
+ *TUser:实体用户类，包含护工和管理员
+ *
  */
+
+
 public class TUser implements Serializable {
     //属性私有，不能在外面随意改值
     private Integer id;
@@ -66,12 +69,12 @@ public class TUser implements Serializable {
 
     @Override
     public String toString() {
-        return "TUser{" +
-                "id=" + id +
-                ", 用户名='" + userName + '\'' +
-                ", 密码='" + password + '\'' +
-                ", 用户类型=" + userType +
-                '}';
+        return "\n------------------------------"+
+                "\nid=" + id +
+                "\n用户名=" + userName+
+                "\n密码=" + password+
+                "\n用户类型=" + userType
+                ;
     }
 
     public void setPassWord(String number) {

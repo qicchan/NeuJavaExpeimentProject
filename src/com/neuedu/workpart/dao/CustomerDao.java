@@ -129,6 +129,14 @@ public class CustomerDao {
      *
      * @param customer 包含更新后信息的客户对象
      */
+    // ... existing code ...
+
+    /**
+     * 按ID更新客户全部信息
+     * 遍历列表找到ID匹配的客户后，将传入对象的各字段值逐一套用
+     *
+     * @param customer 包含更新后信息的客户对象
+     */
     public void updateUser(Customer customer) {
         List<Customer> customerList = findAll();
         for (Customer c : customerList) {
@@ -154,7 +162,13 @@ public class CustomerDao {
                 c.setLevel_id(customer.getLevel_id());
                 c.setFamily_member(customer.getFamily_member());
                 c.setIs_deleted(customer.getIs_deleted());
+                break;
             }
+        }
+        try {
+            om.writeValue(FILE_NAME, customerList);
+        } catch (IOException e) {
+            throw new RuntimeException("更新客户信息失败", e);
         }
     }
 
@@ -165,11 +179,37 @@ public class CustomerDao {
      */
     public void deleteById(Integer id) {
         List<Customer> customerList = findAll();
+        Customer target = null;
         for (Customer customer : customerList) {
             if (customer.getId().equals(id)) {
-                customerList.remove(customer);
+                target = customer;
                 break;
             }
         }
+        if (target != null) {
+            customerList.remove(target);
+            try {
+                om.writeValue(FILE_NAME, customerList);
+            } catch (IOException e) {
+                throw new RuntimeException("删除客户失败", e);
+            }
+        }
+    }
+
+
+    /**
+     * 按护工ID查询该护工服务的所有客户
+     * @param userId 护工ID（TUser的id）
+     * @return 该护工服务的客户列表，未找到返回空列表
+     */
+    public List<Customer> findByUserId(Integer userId) {
+        List<Customer> customerList = findAll();
+        List<Customer> result = new ArrayList<>();
+        for (Customer customer : customerList) {
+            if (userId.equals(customer.getUser_id())) {
+                result.add(customer);
+            }
+        }
+        return result;
     }
 }

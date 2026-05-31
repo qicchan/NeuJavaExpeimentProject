@@ -8,8 +8,8 @@ import java.time.format.DateTimeFormatter;
  * @author 李佩宸
  */
 public class RequirementQuit {
-    /** 退住类型（如：合同到期、个人原因、健康原因等） */
-    private String quitType;
+    /** 退住类型：1-正常退住，2-死亡退住，3-保留床位*/
+    private Integer quitType;
     /** 退住原因 */
     private String reason;
     /** 退住时间 */
@@ -39,7 +39,7 @@ public class RequirementQuit {
      * @param customerName 客户姓名
      * @param customerId 客户ID
      */
-    public RequirementQuit(String quitType, String reason, String quitTime, String customerName, Integer customerId) {
+    public RequirementQuit(int quitType, String reason, String quitTime, String customerName, Integer customerId) {
         this.quitType = quitType;
         this.reason = reason;
         this.quitTime = quitTime;
@@ -57,11 +57,11 @@ public class RequirementQuit {
         this.id = id;
     }
 
-    public String getQuitType() {
+    public int getQuitType() {
         return quitType;
     }
 
-    public void setQuitType(String quitType) {
+    public void setQuitType(int quitType) {
         this.quitType = quitType;
     }
 

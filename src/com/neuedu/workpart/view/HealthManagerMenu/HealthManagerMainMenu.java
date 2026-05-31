@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HealthManagerMainMenu {
     public void execute() {
         System.out.println("==================欢迎来到护工系统===============");
-        System.out.println("请选择功菜单：");
+        System.out.println("=====================功能菜单==================");
         System.out.println("\n1.健康管家");
         System.out.println("-查询自己服务的客户信息列表");
         System.out.println("-对客户进行日常护理并生成和护理记录");

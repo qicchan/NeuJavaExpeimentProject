@@ -20,7 +20,7 @@ public class Customer {
     private String weight;// 体重
     private String blood_type;// 血型
     private String filepath;// 文件路径
-    private Integer user_id;// 用户ID
+    private Integer user_id;// 用户ID，所属护工id
     private Integer level_id;// 护理等级ID
     private String family_member;// 家属
 
@@ -243,22 +243,24 @@ public class Customer {
 
     /**
      * 重写toString，输出含参构造对应的字段信息
-     * 包含：客户姓名、年龄、性别、身份证号、血型、家属、联系电话、楼栋、房间号、入住时间、合同到期时间
+     * 包含：客户姓名、年龄、性别、身份证号、血型、家属、联系电话、楼栋、房间号、入住时间、合同到期
      */
+
     @Override
     public String toString() {
-        return "Customer{" +
-                "customer_name='" + customer_name + '\'' + // 客户姓名
-                ", customer_age=" + customer_age + // 客户年龄
-                ", customer_sex=" + customer_sex + // 客户性别(0男/1女)
-                ", idcard='" + idcard + '\'' + // 身份证号
-                ", blood_type='" + blood_type + '\'' + // 血型
-                ", family_member='" + family_member + '\'' + // 家属
-                ", contact_tel='" + contact_tel + '\'' + // 联系电话
-                ", building_no='" + building_no + '\'' + // 楼栋
-                ", room_no='" + room_no + '\'' + // 房间号
-                ", checkin_date='" + checkin_date + '\'' + // 入住时间
-                ", expiration_date='" + expiration_date + '\'' + // 合同到期时间
-                '}';
+        return "\n============客户信息=============" +
+                "\n客户姓名:" + customer_name +
+                "\n客户年龄:" + customer_age +
+                "\n客户性别:" + (customer_sex == 0 ? "男" : "女") +
+                "\n身份证号:" + idcard +
+                "\n血型:" + blood_type +
+                "\n家属:" + family_member +
+                "\n联系电话:" + contact_tel +
+                "\n楼栋:" + building_no +
+                "\n房间号:" + room_no +
+                "\n所属护工id:" + user_id +
+                "\n入住时间:" + checkin_date +
+                "\n合同到期时间:" + expiration_date +
+                "\n==========================";
     }
 }

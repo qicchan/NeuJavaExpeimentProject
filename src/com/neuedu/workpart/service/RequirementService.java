@@ -74,7 +74,7 @@ public class RequirementService {
      * @param customerId 客户ID
      * @return 操作结果提示
      */
-    public String createQuitRequirement(String quitType, String reason, String quitTime,
+    public String createQuitRequirement(int quitType, String reason, String quitTime,
                                         String customerName, Integer customerId) {
         RequirementQuit requirementQuit = new RequirementQuit(quitType, reason, quitTime,
                 customerName, customerId);

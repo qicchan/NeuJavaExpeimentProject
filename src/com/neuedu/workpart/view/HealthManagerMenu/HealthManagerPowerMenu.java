@@ -128,8 +128,9 @@ public class HealthManagerPowerMenu implements IMenu {
         System.out.print("请输入客户ID：");
         Integer customerId = sc.nextInt();
         sc.nextLine(); // 消耗换行符
-        System.out.print("请输入退住类型：");
-        String quitType = sc.nextLine();
+        System.out.print("请输入退住类型" +
+                "\n1.正常退住 2.死亡退住 3.保留床位");
+        int quitType = sc.nextInt();
         System.out.print("请输入退住原因：");
         String reason = sc.nextLine();
         System.out.print("请输入退住时间（yyyy-MM-dd HH:mm:ss）：");
