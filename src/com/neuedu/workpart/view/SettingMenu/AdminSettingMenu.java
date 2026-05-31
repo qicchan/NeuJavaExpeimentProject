@@ -67,7 +67,7 @@ public class AdminSettingMenu implements IMenu {
                     break;
                 case 11:
                     //为客户分配护工
-                    AssignCustomerToHmMenu assignMenu = new AssignCustomerToHmMenu();
+                    CareSetting assignMenu = new CareSetting();
                     assignMenu.execute();
                     break;
                 case 12:

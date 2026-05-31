@@ -9,7 +9,7 @@ import com.neuedu.workpart.view.IMenu;
 import java.util.List;
 import java.util.Scanner;
 
-public class AssignCustomerToHmMenu implements IMenu {
+public class CareSetting implements IMenu {
     @Override
     public void execute() {
         Scanner sc = new Scanner(System.in);
