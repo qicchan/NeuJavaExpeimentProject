@@ -1,0 +1,12 @@
+[ {
+  "id" : 72,
+  "customerName" : "张三",
+  "careProject" : "散步",
+  "careLevel" : null,
+  "careTime" : "2026-06-03 19:27:26",
+  "careNum" : 1,
+  "hmId" : 49,
+  "customerId" : 46,
+  "status" : "已完成",
+  "isHidden" : 0
+} ]

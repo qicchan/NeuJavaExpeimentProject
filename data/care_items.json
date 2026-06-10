@@ -1,0 +1,19 @@
+[ {
+  "id" : 69,
+  "code" : "01",
+  "name" : "散步",
+  "price" : "100",
+  "status" : "停用",
+  "executionPeriod" : "1/w",
+  "executionCount" : "3",
+  "description" : "散步"
+}, {
+  "id" : 75,
+  "code" : "02",
+  "name" : "跑步",
+  "price" : "1",
+  "status" : "启用",
+  "executionPeriod" : "2/w",
+  "executionCount" : "10",
+  "description" : "跑步"
+} ]

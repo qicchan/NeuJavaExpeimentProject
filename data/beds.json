@@ -1,0 +1,25 @@
+[ {
+  "id" : "53",
+  "bedNumber" : "303-2",
+  "roomNumber" : "303",
+  "building" : "606",
+  "status" : "空闲"
+}, {
+  "id" : "61",
+  "bedNumber" : "302-1",
+  "roomNumber" : "302",
+  "building" : "606",
+  "status" : "有人"
+}, {
+  "id" : "65",
+  "bedNumber" : "303-3",
+  "roomNumber" : "301",
+  "building" : "606",
+  "status" : "有人"
+}, {
+  "id" : "68",
+  "bedNumber" : "303-4",
+  "roomNumber" : "303",
+  "building" : "606",
+  "status" : "空闲"
+} ]

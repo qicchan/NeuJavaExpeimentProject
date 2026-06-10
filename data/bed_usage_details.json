@@ -1,0 +1,61 @@
+[ {
+  "id" : "48",
+  "customerId" : "46",
+  "customerName" : "张三",
+  "bedNumber" : "01",
+  "roomNumber" : "01",
+  "building" : "301",
+  "startTime" : "2026-06-02",
+  "endTime" : "2026-06-02",
+  "status" : "使用历史"
+}, {
+  "id" : "56",
+  "customerId" : "55",
+  "customerName" : "李四",
+  "bedNumber" : "303-2",
+  "roomNumber" : "303",
+  "building" : "606",
+  "startTime" : "2026-06-03",
+  "endTime" : "2026-06-03",
+  "status" : "使用历史"
+}, {
+  "id" : "60",
+  "customerId" : "59",
+  "customerName" : "王五",
+  "bedNumber" : "303-3",
+  "roomNumber" : "303",
+  "building" : "606",
+  "startTime" : "2026-06-03",
+  "endTime" : "2026-06-03",
+  "status" : "使用历史"
+}, {
+  "id" : "62",
+  "customerId" : "59",
+  "customerName" : "王五",
+  "bedNumber" : "302-1",
+  "roomNumber" : "302",
+  "building" : "606",
+  "startTime" : "2026-06-03",
+  "endTime" : null,
+  "status" : "正在使用"
+}, {
+  "id" : "64",
+  "customerId" : "63",
+  "customerName" : "杨过",
+  "bedNumber" : "303-1",
+  "roomNumber" : "303",
+  "building" : "606",
+  "startTime" : "2026-06-03",
+  "endTime" : null,
+  "status" : "正在使用"
+}, {
+  "id" : "67",
+  "customerId" : "66",
+  "customerName" : "杨过",
+  "bedNumber" : "303-3",
+  "roomNumber" : "301",
+  "building" : "606",
+  "startTime" : "2026-06-03",
+  "endTime" : null,
+  "status" : "正在使用"
+} ]

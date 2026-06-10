@@ -1,0 +1,25 @@
+[ {
+  "id" : 54,
+  "reason" : "探亲",
+  "outTime" : "2026-05-31 08:00:00",
+  "expectReturnTime" : "2026-05-31 18:00:00",
+  "actualReturnTime" : "2026-06-03 19:01:43",
+  "customerName" : "张三",
+  "customerId" : 46,
+  "applyTime" : "2026-06-03 18:53:02",
+  "requireHMId" : 49,
+  "approvedAdmin" : 13,
+  "approved" : true
+}, {
+  "id" : 73,
+  "reason" : "探亲",
+  "outTime" : "2026-05-31 08:00:00",
+  "expectReturnTime" : "2026-05-31 18:00:00",
+  "actualReturnTime" : "2026-06-03 19:31:34",
+  "customerName" : "张三",
+  "customerId" : 46,
+  "applyTime" : "2026-06-03 19:27:58",
+  "requireHMId" : 49,
+  "approvedAdmin" : 13,
+  "approved" : true
+} ]
